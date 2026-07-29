@@ -25,7 +25,7 @@ def index():
 
         return redirect(url_for('user.perfil'))  # usuário comum
 
-    return redirect(url_for('auth.register'))  # não logado
+    return redirect(url_for('auth.cadastro'))  # não logado
 
 if __name__ == '__main__':
     app.run(debug=True)  # roda sistema

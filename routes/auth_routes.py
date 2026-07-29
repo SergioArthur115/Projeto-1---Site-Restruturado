@@ -12,8 +12,8 @@ def check_email():
     user = get_user_by_email(email)
     return jsonify({'exists': bool(user)})
 
-@bp.route('/register', methods=['GET','POST'])
-def register():
+@bp.route('/cadastro', methods=['GET','POST'])
+def cadastro():
     if request.method == 'POST':
         nome = request.form.get('nome')
         sobrenome = request.form.get('sobrenome')
@@ -30,7 +30,7 @@ def register():
 
         if get_user_by_email(email):
             flash('Email já cadastrado')
-            return redirect(url_for('auth.register'))
+            return redirect(url_for('auth.cadastro'))
 
         filename = 'default.png'
         if file:
@@ -41,7 +41,7 @@ def register():
         flash('Cadastro realizado')
         return redirect(url_for('auth.login'))
 
-    return render_template('register.html')
+    return render_template('cadastro.html')
 
 @bp.route('/login', methods=['GET','POST'])
 def login():
