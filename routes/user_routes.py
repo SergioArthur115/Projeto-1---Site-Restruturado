@@ -7,6 +7,32 @@ from config import UPLOAD_FOLDER
 
 bp = Blueprint('user', __name__)
 
+# Adicione ao final do arquivo routes/user_routes.py
+
+@bp.route('/cursos')
+def cursos():
+    return render_template('cursos.html')
+
+@bp.route('/cursos/informatica')
+def curso_info():
+    return render_template('cursoinfo.html')
+
+@bp.route('/cursos/sistemas')
+def curso_sistemas():
+    return render_template('cursosistemas.html')
+
+@bp.route('/cursos/administracao')
+def curso_admin():
+    return render_template('cursoadmin.html')
+
+@bp.route('/cursos/ia')
+def curso_ia():
+    return render_template('cursointeligencia.html')
+
+@bp.route('/localizacao')
+def localizacao():
+    return render_template('localizacao.html')
+
 @bp.route('/perfil', methods=['GET','POST'])
 @login_required
 def perfil():
@@ -29,5 +55,7 @@ def perfil():
 
         update_user(user_id, nome, email, filename)
 
+
     user = get_user_by_id(user_id)
     return render_template('perfil.html', user=user)
+

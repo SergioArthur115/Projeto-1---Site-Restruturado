@@ -1,27 +1,29 @@
-{# templates/partials/header.html #}
 <header>
     <section>
-        <img class="logosenac" src="{{ url_for('static', filename='images/logosenac.png') }}" alt="Logo Senac"
-            title="Logo Senac">
+        <img class="logosenac" src="{{ url_for('static', filename='images/logosenac.png') }}" alt="Logo Senac" title="Logo Senac">
         <input type="checkbox" id="bt_menu">
         <label for="bt_menu">&#9776;</label>
         <nav class="menu_principal">
             <ul>
                 <li><a href="{{ url_for('index') }}">Início</a></li>
-                <li><a href="{{ url_for('paginas/cursos') }}">Cursos</a>
+                <li><a href="{{ url_for('user.cursos') }}">Cursos</a>
                     <ul>
-                        <li><a href="{{ url_for('paginas/cursoinfo') }}">Informática</a></li>
-                        <li><a href="{{ url_for('paginas/cursosistemas') }}">Desenvolvimento de Sistemas</a></li>
-                        <li><a href="{{ url_for('paginas/cursoadmin') }}">Administração</a></li>
-                        <li><a href="{{ url_for('paginas/cursointeligencia') }}">Inteligência Artificial</a></li>
+                        <li><a href="{{ url_for('user.curso_info') }}">Informática</a></li>
+                        <li><a href="{{ url_for('user.curso_sistemas') }}">Desenvolvimento de Sistemas</a></li>
+                        <li><a href="{{ url_for('user.curso_admin') }}">Administração</a></li>
+                        <li><a href="{{ url_for('user.curso_ia') }}">Inteligência Artificial</a></li>
                     </ul>
                 </li>
-                <li><a href="{{ url_for('paginas/localizacao') }}">Localização</a></li>
-                <li><a href="{{ url_for('paginas/cadastro') }}">Localização</a></li>
+                <li><a href="{{ url_for('user.localizacao') }}">Localização</a></li>
+                <li><a href="{{ url_for('auth.cadastro') }}">Cadastro</a></li>
+                
                 {% if session.user_id %}
-                {% if session.is_admin %}
-                <li><a href="{{ url_for('admin.painel') }}">Painel Admin</a></li>
-                {% endif %}
+                    {% if session.is_admin %}
+                    <li><a href="{{ url_for('admin.admin') }}">Painel Admin</a></li> 
+                    {% endif %}
+                    <li><a href="{{ url_for('auth.logout') }}">Sair</a></li>
+                {% else %}
+                    <li><a href="{{ url_for('auth.login') }}">Entrar</a></li>
                 {% endif %}
             </ul>
         </nav>
