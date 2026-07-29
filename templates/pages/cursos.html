@@ -9,54 +9,62 @@
 
 <body>
     {% include 'partials/header.html' %}
-    <section>
-        <div>
-            <h1>Técnico em Informática</h1>
-            <p>
-                Você busca uma oportunidade de inserção no mercado de trabalho? A área de Informática fascina você?
-                Gostaria de agregar conhecimentos fundamentais para os mais diversos segmentos profissionais? Se as
-                respostas forem sim, o curso Técnico em Informática do Senac-RS foi feito para você!
-            </p>
-            <img src="{{ url_for('static', filename='images/cursoti.png') }}" alt="Curso Técnico em Informática"
-                title="Curso Técnico em Informática">
-        </div>
-        <div>
-            <h1>Técnico em Desenvolvimento de Sistemas</h1>
-            <p>
-                O desenvolvimento de novas soluções lhe desafia? Você gostaria de trabalhar em uma multinacional? O
-                curso Técnico em Desenvolvimento de Sistemas - Bilíngue pode ser o primeiro passo para você realizar
-                esses sonhos. Com ele, você terá a qualificação necessária para atuar na área de desenvolvimento, com um
-                grande diferencial: a habilidade comunicacional em língua inglesa, para falar com um mercado cada dia
-                mais globalizado. A área de desenvolvimento de sistemas emprega milhares de pessoas todos os dias e
-                muitas das vagas não são supridas por falta de talentos.
-            </p>
-            <img src="{{ url_for('static', filename='images/cursosistemas.png') }}"
-                alt="Curso Técnico em Desenvolvimento de Sistemas" title="Curso Técnico em Desenvolvimento de Sistemas">
-        </div>
-        <div>
-            <h1>Técnico em Administração</h1>
-            <p>
-                O profissional administrativo tem amplas possibilidades no mercado de trabalho! Com a duração de 12
-                meses, o curso Técnico em Administração capacita você a executar atividades administrativas relacionadas
-                aos processos de gestão de pessoas, de operações logísticas, gestão de materiais e patrimônio, de
-                marketing, de vendas e de finanças.
-            </p>
-            <img src="{{ url_for('static', filename='images/cursoadm.png') }}" alt="Curso Técnico em Administração"
-                title="Curso Técnico em Administração">
-        </div>
-        <div>
-            <h1>Técnico em Inteligência Artificial</h1>
-            <p>
-                Prepare-se para o futuro com o Curso Técnico em Inteligência Artificial do SENAC RS!
-                A Inteligência Artificial está transformando o mundo, e você pode estar na linha de frente dessa
-                revolução. Nosso curso foi desenvolvido para formar profissionais capazes de compreender, desenvolver e
-                aplicar soluções inteligentes que fazem a diferença em diversos setores do mercado.
-            </p>
-            <img src="{{ url_for('static', filename='images/cursoia.jpg') }}"
-                alt="Curso Técnico em Inteligência Artificial" title="Curso Técnico em Inteligência Artificial">
-        </div>
-    </section>
+    <main>
+        <section>
+            <div>
+                <h1>Técnico em Informática</h1>
+                <p>
+                    Você busca uma oportunidade de inserção no mercado de trabalho? A área de Informática fascina você?
+                    Gostaria de agregar conhecimentos fundamentais para os mais diversos segmentos profissionais? Se as
+                    respostas forem sim, o curso Técnico em Informática do Senac-RS foi feito para você!
+                </p>
+                <img src="{{ url_for('static', filename='images/cursoti.png') }}" alt="Curso Técnico em Informática"
+                    title="Curso Técnico em Informática">
+            </div>
+            <div>
+                <h1>Técnico em Desenvolvimento de Sistemas</h1>
+                <p>
+                    O desenvolvimento de novas soluções lhe desafia? Você gostaria de trabalhar em uma multinacional? O
+                    curso Técnico em Desenvolvimento de Sistemas - Bilíngue pode ser o primeiro passo para você realizar
+                    esses sonhos. Com ele, você terá a qualificação necessária para atuar na área de desenvolvimento,
+                    com um
+                    grande diferencial: a habilidade comunicacional em língua inglesa, para falar com um mercado cada
+                    dia
+                    mais globalizado. A área de desenvolvimento de sistemas emprega milhares de pessoas todos os dias e
+                    muitas das vagas não são supridas por falta de talentos.
+                </p>
+                <img src="{{ url_for('static', filename='images/cursosistemas.png') }}"
+                    alt="Curso Técnico em Desenvolvimento de Sistemas"
+                    title="Curso Técnico em Desenvolvimento de Sistemas">
+            </div>
+            <div>
+                <h1>Técnico em Administração</h1>
+                <p>
+                    O profissional administrativo tem amplas possibilidades no mercado de trabalho! Com a duração de 12
+                    meses, o curso Técnico em Administração capacita você a executar atividades administrativas
+                    relacionadas
+                    aos processos de gestão de pessoas, de operações logísticas, gestão de materiais e patrimônio, de
+                    marketing, de vendas e de finanças.
+                </p>
+                <img src="{{ url_for('static', filename='images/cursoadm.png') }}" alt="Curso Técnico em Administração"
+                    title="Curso Técnico em Administração">
+            </div>
+            <div>
+                <h1>Técnico em Inteligência Artificial</h1>
+                <p>
+                    Prepare-se para o futuro com o Curso Técnico em Inteligência Artificial do SENAC RS!
+                    A Inteligência Artificial está transformando o mundo, e você pode estar na linha de frente dessa
+                    revolução. Nosso curso foi desenvolvido para formar profissionais capazes de compreender,
+                    desenvolver e
+                    aplicar soluções inteligentes que fazem a diferença em diversos setores do mercado.
+                </p>
+                <img src="{{ url_for('static', filename='images/cursoia.jpg') }}"
+                    alt="Curso Técnico em Inteligência Artificial" title="Curso Técnico em Inteligência Artificial">
+            </div>
+        </section>
+    </main>
     {% include 'partials/footer.html' %}
+
 </body>
 
 </html>
