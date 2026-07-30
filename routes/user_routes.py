@@ -11,27 +11,27 @@ bp = Blueprint('user', __name__)
 
 @bp.route('/cursos')
 def cursos():
-    return render_template('cursos.html')
+    return render_template('pages/cursos.html')  
 
 @bp.route('/cursos/informatica')
 def curso_info():
-    return render_template('cursoinfo.html')
+    return render_template('pages/cursoinfo.html')
 
 @bp.route('/cursos/sistemas')
 def curso_sistemas():
-    return render_template('cursosistemas.html')
+    return render_template('pages/cursosistemas.html')
 
 @bp.route('/cursos/administracao')
 def curso_admin():
-    return render_template('cursoadmin.html')
+    return render_template('pages/cursoadmin.html')
 
 @bp.route('/cursos/ia')
 def curso_ia():
-    return render_template('cursointeligencia.html')
+    return render_template('pages/cursointeligencia.html')
 
 @bp.route('/localizacao')
 def localizacao():
-    return render_template('localizacao.html')
+    return render_template('pages/localizacao.html')
 
 @bp.route('/perfil', methods=['GET','POST'])
 @login_required

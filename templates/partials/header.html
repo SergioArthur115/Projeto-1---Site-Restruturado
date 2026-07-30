@@ -15,8 +15,7 @@
                     </ul>
                 </li>
                 <li><a href="{{ url_for('user.localizacao') }}">Localização</a></li>
-                <li><a href="{{ url_for('auth.cadastro') }}">Cadastro</a></li>
-                
+                <li><a href="{{ url_for('paginas/cadastro') }}">Localização</a></li>                
                 {% if session.user_id %}
                     {% if session.is_admin %}
                     <li><a href="{{ url_for('admin.admin') }}">Painel Admin</a></li> 

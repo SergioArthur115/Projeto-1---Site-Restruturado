@@ -1,0 +1,267 @@
+.p1{
+    text-align: center;
+}
+.linkRedes{
+    text-decoration: none;
+}
+.imgRedes{
+    margin-left: 5px;
+    margin-top: 5px;
+}
+/*
+ border-radius: 4px; - arredonda as bordas
+    border: none; retira a borda preta
+*/
+.hr1, #hr2{
+    background-color: #ffa500;
+    height: 5px;
+    border-radius: 4px;
+    border: none;
+}
+#hr2{
+    margin-bottom: 0;
+}
+#h1{
+    text-align: center;
+}
+.h2{
+    text-align: center;
+    font-family: arial black;
+    font-size: 26px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#imgBanner{
+    width: 100%;
+    height: auto;
+}
+.pText, .pJustify{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 130%;
+}
+.pText{
+    text-align: center;
+}
+#imgBannerPsg{
+    width: 80%;
+    height: auto;
+    border-radius: 4px;
+}
+#h3{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    line-height: 130%;
+}
+#iframeYoutube{
+    width: 560px;
+    height: 315px;
+}
+.pJustify{
+    text-align: justify;
+}
+#pDireitos{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+/*Código para página oprograma.html */
+#imgAprendiz{
+    width: 19%;
+    height: auto;
+    float: right;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+/*Código para página inscrever.html */
+#imgBannerInscricao{
+    width: 70%;
+    height: auto;
+    border-radius: 4px;
+}
+#iframeMaps{
+    width: 600px;
+    height: 450px;
+    border: 0;
+}
+/*Código para página perguntas.html */
+#imgBannerPerguntas{
+    width: 80%;
+    height: auto;
+    border-radius: 4px;
+}
+.hLeft{
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 1%;
+    margin-right: 1%;
+    line-height: 130%;
+}
+.ulPerguntas{
+    list-style-type: square;
+}
+.liPerguntas{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    line-height: 130%;
+}
+.olPerguntas{
+    list-style-type: lower-alpha;
+}
+#olPerguntasSub{
+    list-style-type: upper-roman;
+    margin-left: 2%;
+}
+
+/* Código para deixar as perguntas de forma mais interativa */
+/* Define o espaçamento geral da seção de perguntas */
+.sectionBloco {
+    margin: 20px 5%; /* adiciona margens laterais e verticais */
+}
+
+/* Define cada grupo de pergunta + resposta */
+details.detalhesBloco {
+    margin-bottom: 10px; /* espaço entre as perguntas */
+}
+
+/* Remove o marcador padrão do elemento summary */
+details.detalhesBloco summary::-webkit-details-marker {
+    display: none; /* esconde o triângulo padrão */
+}
+
+/* Transforma o título da pergunta em área clicável */
+details.detalhesBloco summary {
+    list-style: none; /* remove marcador */
+    cursor: pointer; /* mostra que é clicável */
+}
+
+/* Adiciona um ícone de + à direita da pergunta */
+details.detalhesBloco summary::after {
+    content: "＋"; /* símbolo de mais */
+    float: right; /* alinha à direita */
+    font-weight: bold;
+    color: #ffa500; /* mesma cor laranja do tema */
+    transition: transform 0.2s; /* animação suave */
+}
+
+/* Quando a pergunta estiver aberta, troca o ícone para - */
+details.detalhesBloco[open] summary::after {
+    content: "－"; /* símbolo de menos */
+}
+
+/* Animação de aparecimento da resposta */
+details.detalhesBloco[open] > *:not(summary) {
+    animation: fadeIn 0.3s ease; /* usa animação abaixo */
+}
+
+/* Define a animação para o efeito de fade (aparecimento suave) */
+@keyframes fadeIn {
+    from {
+        opacity: 0; /* começa invisível */
+        transform: translateY(-5px); /* levemente acima */
+    }
+    to {
+        opacity: 1; /* totalmente visível */
+        transform: translateY(0); /* posição normal */
+    }
+}
+/*Novo código para formatação da index com a estrutura da div */
+#pCabecalhoMeio{
+    text-align: center;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    
+}
+#pLink{
+    text-align: right;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    margin-right: 10%;
+}
+.hr2{
+    background-color: #ffa500;
+    width: 70%;
+    height: 5px;
+    text-align: center;
+    border-radius: 4px;
+    border: none;
+}
+/*Formatação da página consulta */
+#hr3, #hr4{
+    background-color: #0000cd;
+    height: 5px;
+    border-radius: 4px;
+    border: none;
+}
+#hr4{
+    margin-bottom: 0;
+}
+.imgTabela{
+    width: 300px;
+    height: auto;
+}
+/*Formatação da página fale cocnosco */
+#formP{
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 1%;
+    margin-top: 1%;
+}
+.dados label{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #666;
+    display: block;
+    font-weight: bold;
+}
+
+
+@media all and (max-width: 750px){
+    #hr3{
+        display: none;
+    }
+}
+
+/*Formatando das tags para telas responsivas */
+@media all and (max-width: 600px){
+    #plink{
+        text-align: center;        
+        margin-top: 1%;
+        margin-bottom: 1%;
+    }
+    #imgBannerPsg{
+        width: 98%;
+        height: auto;
+        border-radius: 4px;
+    }
+    #iframeYoutube{
+        width: 100%;
+       
+    }
+    
+}
+@media all and (max-width: 420px){
+    #iframeYoutube{
+        width: 100%;
+        height: auto;
+    }
+}
