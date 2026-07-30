@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Tech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+
+<body>
+    {% include 'partials/header.html' %}
+    <main>
+        <section>
+            <article><img src="{{ url_for('static', filename='images/cursoadm1.png') }}"
+                    alt="Banner Técnico em Administração" title="Banner Técnico em Administração"></article>
+
+            <div>
+                <h1>Técnico em Administração</h1>
+                <h2>Sobre o curso</h2>
+                <p>
+                    O profissional administrativo tem amplas possibilidades no mercado de trabalho! Com a duração de 12
+                    meses, o curso Técnico em Administração capacita você a executar atividades administrativas
+                    relacionadas aos processos de gestão de pessoas, de operações logísticas, gestão de materiais e
+                    patrimônio, de marketing, de vendas e de finanças.
+                    Atua em organizações públicas e privadas de segmentos variados, tais como das áreas de comércio, de
+                    serviços, da indústria, de consultoria, de ensino e pesquisa, relacionando-se com equipes de
+                    diversos setores da organização, por meio da prestação de serviços autônomos, temporários ou
+                    contrato efetivo.
+                </p>
+            </div>
+        </section>
+    </main>
+    {% include 'partials/footer.html' %}
+
+</body>
+
+</html>
