@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Tech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+
+<body>
+    {% include 'partials/header.html' %}
+    <main>
+        <section>
+            <article><img src="{{ url_for('static', filename='images/cursoti1.png') }}"
+                    alt="Banner Técnico em Informática" title="Banner Técnico em Informática"></article>
+
+            <div>
+                <h1>Técnico em Informática</h1>
+                <h2>Sobre o curso</h2>
+                <p>
+                    Você busca uma oportunidade de inserção no mercado de trabalho? A área de Informática fascina você?
+                    Gostaria de agregar conhecimentos fundamentais para os mais diversos segmentos profissionais? Se as
+                    respostas forem sim, o curso Técnico em Informática do Senac-RS foi feito para você!
+
+                    A formação vai te preparar para fazer o planejamento e pela execução dos processos de manutenção de
+                    computadores e pela operação de redes locais de computadores. Além de, desenvolver aplicativos
+                    computacionais, adotando normas técnicas, de qualidade, de saúde, de segurança do trabalho e
+                    preservação
+                    ambiental no desempenho de sua função.
+
+                    Por meio de uma proposta pedagógica adequada às exigências do mundo profissional, o curso oferece
+                    nos
+                    momentos presenciais* uma aprendizagem pautada por metodologias que propiciam atuação por projetos,
+                    aulas práticas, teóricas, vivenciais e flexíveis com foco no mercado de trabalho.
+
+                    Ao final da formação você estará apto a atuar em empresas de diversos segmentos, além de poder
+                    participar de concursos em organizações públicas.
+
+                    Gostou da ideia de ser um profissional completo da área de Informática? Venha para o curso Técnico
+                    em
+                    Informática e mude de vida.
+                </p>
+            </div>
+        </section>
+    </main>
+    {% include 'partials/footer.html' %}
+
+</body>
+
+</html>

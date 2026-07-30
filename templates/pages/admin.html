@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Tech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+
+<body>
+    {% include 'partials/header.html' %}
+    <main>
+        <section>
+            <div>
+                <h2>Painel Admin</h2>
+                <a href="/logout"><button>Sair</button></a>
+            </div>
+            <div>
+                <form method="GET">
+                    <input name="search" placeholder="Buscar nome ou email" value="{{search}}">
+                    <select name="order">
+                        <option value="nome" {% if order=='nome' %}selected{% endif %}>Nome</option>
+                        <option value="email" {% if order=='email' %}selected{% endif %}>Email</option>
+                    </select>
+                    <button>Buscar</button>
+                </form>
+            </div>
+            <div>
+                <ul>
+                    {% for u in users %}
+                    <li>
+
+                        <img src="/static/uploads/{{u.foto}}" width="50">
+
+                        {{u.nome}} - {{u.email}}
+
+                        <a href="/admin/edit/{{u.id}}">
+                            <button>Editar</button>
+                        </a>
+
+                        <a href="/admin/delete/{{u.id}}">
+                            <button onclick="return confirm('Tem certeza?')">Excluir</button>
+                        </a>
+
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <!--PAGINAÇÃO -->
+            <div>
+                {% for p in range(1, total_pages + 1) %}
+                <a href="?page={{p}}&search={{search}}&order={{order}}">
+                    <button {% if p==page %}style="font-weight:bold" {% endif %}>
+                        {{p}}
+                    </button>
+                </a>
+                {% endfor %}
+            </div>
+        </section>
+    </main>
+    {% include 'partials/footer.html' %}
+
+</body>
+
+</html>

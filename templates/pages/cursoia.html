@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Senac Tech</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/body.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+
+<body>
+    {% include 'partials/header.html' %}
+    <main>
+        <section>
+            <article><img src="{{ url_for('static', filename='images/cursoia1.png') }}"
+                    alt="Banner Técnico em Inteligência Artificial" title="Banner Técnico em Inteligência Artificial">
+            </article>
+
+            <div>
+                <h1>Técnico em Inteligência Artificial</h1>
+                <h2>Sobre o curso</h2>
+                <p>
+                    Curso Técnico em Inteligência Artificial – SENAC RS
+
+                    Prepare-se para o futuro com o Curso Técnico em Inteligência Artificial do SENAC RS!
+
+                    A Inteligência Artificial está transformando o mundo, e você pode estar na linha de frente dessa
+                    revolução. Nosso curso foi desenvolvido para formar profissionais capazes de compreender,
+                    desenvolver e aplicar soluções inteligentes que fazem a diferença em diversos setores do mercado.
+
+                    ATENÇÃO: Este curso não é sobre criar prompts melhores, mas sobre criar, aprimorar e implementar
+                    modelos de IA.
+
+                    Por que escolher este curso?
+
+                    Aprendizado na prática: Desenvolva projetos reais utilizando técnicas avançadas de IA e programação.
+
+                    Domínio de ferramentas essenciais: Aprofunde-se em algoritmos de aprendizado de máquina, redes
+                    neurais e processamento de dados.
+
+                    Foco em linguagens modernas: Domine Python e outras tecnologias fundamentais para o desenvolvimento
+                    de IA.
+
+                    Análise crítica e ética: Identifique e corrija vieses, garantindo soluções tecnológicas
+                    responsáveis. Trabalho em equipe: Aprimore suas habilidades interpessoais com projetos
+                    colaborativos.
+
+                    Conexão com o mercado: Aplique seus conhecimentos em diferentes setores e esteja pronto para os
+                    desafios do mundo real.
+
+                    Seja um profissional preparado para atuar no universo da Inteligência Artificial e conquiste novas
+                    oportunidades no mercado de trabalho!
+
+                    Matrículas abertas! Entre em contato com o SENAC RS e transforme o seu futuro com a tecnologia!
+                </p>
+            </div>
+        </section>
+    </main>
+    {% include 'partials/footer.html' %}
+
+</body>
+
+</html>
