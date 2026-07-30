@@ -41,7 +41,7 @@ def cadastro():
         flash('Cadastro realizado')
         return redirect(url_for('auth.login'))
 
-    return render_template('cadastro.html')
+    return render_template('pages/cadastro.html')
 
 @bp.route('/login', methods=['GET','POST'])
 def login():
@@ -58,9 +58,11 @@ def login():
 
         flash('Login inválido')
 
-    return render_template('login.html')
+    return render_template('pages/login.html')
+
 
 @bp.route('/logout')
 def logout():
-    session.clear()
+    session.clear() 
+    flash('Você saiu da sua conta.')
     return redirect(url_for('auth.login'))

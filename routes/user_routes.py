@@ -2,20 +2,18 @@ from flask import Blueprint, render_template, request, session
 from models.user_model import get_user_by_id, update_user
 from utils.decorators import login_required
 import os
-import uuid  # gerar nome único
+import uuid
 from config import UPLOAD_FOLDER
 
 bp = Blueprint('user', __name__)
 
-# Adicione ao final do arquivo routes/user_routes.py
-
 @bp.route('/cursos')
 def cursos():
-    return render_template('pages/cursos.html')  
+    return render_template('pages/cursos.html')
 
 @bp.route('/cursos/informatica')
 def curso_info():
-    return render_template('pages/cursoinfo.html')
+    return render_template('pages/cursoti.html')
 
 @bp.route('/cursos/sistemas')
 def curso_sistemas():
@@ -23,11 +21,11 @@ def curso_sistemas():
 
 @bp.route('/cursos/administracao')
 def curso_admin():
-    return render_template('pages/cursoadmin.html')
+    return render_template('pages/cursoadm.html')
 
 @bp.route('/cursos/ia')
 def curso_ia():
-    return render_template('pages/cursointeligencia.html')
+    return render_template('pages/cursoia.html')
 
 @bp.route('/localizacao')
 def localizacao():
@@ -44,10 +42,8 @@ def perfil():
         file = request.files.get('foto')
 
         user = get_user_by_id(user_id)
-
         filename = user['foto']
 
-        # nome único imagem
         if file and file.filename != '':
             ext = file.filename.split('.')[-1]
             filename = f"{uuid.uuid4()}.{ext}"
@@ -55,7 +51,5 @@ def perfil():
 
         update_user(user_id, nome, email, filename)
 
-
     user = get_user_by_id(user_id)
     return render_template('perfil.html', user=user)
-
