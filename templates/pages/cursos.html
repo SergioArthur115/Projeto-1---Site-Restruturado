@@ -22,8 +22,10 @@
                     Gostaria de agregar conhecimentos fundamentais para os mais diversos segmentos profissionais? Se as
                     respostas forem sim, o curso Técnico em Informática do Senac-RS foi feito para você!
                 </p>
-                <img src="{{ url_for('static', filename='images/cursoti.png') }}" alt="Curso Técnico em Informática"
-                    title="Curso Técnico em Informática">
+                <a href="{{ url_for('user.curso_info') }}">
+                    <img src="{{ url_for('static', filename='images/cursoti.png') }}" alt="Curso Técnico em Informática"
+                        title="Curso Técnico em Informática">
+                </a>
             </div>
             <div>
                 <h1>Técnico em Desenvolvimento de Sistemas</h1>
@@ -37,9 +39,11 @@
                     mais globalizado. A área de desenvolvimento de sistemas emprega milhares de pessoas todos os dias e
                     muitas das vagas não são supridas por falta de talentos.
                 </p>
-                <img src="{{ url_for('static', filename='images/cursosistemas.png') }}"
-                    alt="Curso Técnico em Desenvolvimento de Sistemas"
-                    title="Curso Técnico em Desenvolvimento de Sistemas">
+                <a href="{{ url_for('user.curso_sistemas') }}">
+                    <img src="{{ url_for('static', filename='images/cursosistemas.png') }}"
+                        alt="Curso Técnico em Desenvolvimento de Sistemas"
+                        title="Curso Técnico em Desenvolvimento de Sistemas">
+                </a>
             </div>
             <div>
                 <h1>Técnico em Administração</h1>
@@ -50,8 +54,10 @@
                     aos processos de gestão de pessoas, de operações logísticas, gestão de materiais e patrimônio, de
                     marketing, de vendas e de finanças.
                 </p>
-                <img src="{{ url_for('static', filename='images/cursoadm.png') }}" alt="Curso Técnico em Administração"
-                    title="Curso Técnico em Administração">
+                <a href="{{ url_for('user.curso_admin') }}">
+                    <img src="{{ url_for('static', filename='images/cursoadm.png') }}"
+                        alt="Curso Técnico em Administração" title="Curso Técnico em Administração">
+                </a>
             </div>
             <div>
                 <h1>Técnico em Inteligência Artificial</h1>
@@ -62,8 +68,10 @@
                     desenvolver e
                     aplicar soluções inteligentes que fazem a diferença em diversos setores do mercado.
                 </p>
-                <img src="{{ url_for('static', filename='images/cursoia.jpg') }}"
-                    alt="Curso Técnico em Inteligência Artificial" title="Curso Técnico em Inteligência Artificial">
+                <a href="{{ url_for('user.curso_ia') }}">
+                    <img src="{{ url_for('static', filename='images/cursoia.jpg') }}"
+                        alt="Curso Técnico em Inteligência Artificial" title="Curso Técnico em Inteligência Artificial">
+                </a>
             </div>
         </section>
     </main>
