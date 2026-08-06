@@ -17,7 +17,7 @@ def cadastro():
     if request.method == 'POST':
         nome = request.form.get('nome')
         sobrenome = request.form.get('sobrenome')
-        datanasc = request.form.get('datanasc')
+        data_nasc = request.form.get('data_nasc')
         telefone = request.form.get('telefone')
         endereco = request.form.get('endereco')
         numero = request.form.get('numero')
@@ -26,22 +26,42 @@ def cadastro():
         estado = request.form.get('estado')
         email = request.form.get('email')
         senha = request.form.get('senha')
+        observacao = request.form.get('observacoes', '')
         file = request.files.get('foto')
 
         if get_user_by_email(email):
-            flash('Email já cadastrado')
+            flash('Email ja cadastrado')
             return redirect(url_for('auth.cadastro'))
 
         filename = 'default.png'
-        if file:
+        if file and file.filename != '':
             filename = file.filename
             file.save(os.path.join(UPLOAD_FOLDER, filename))
 
-        create_user(nome,sobrenome,email,datanasc,telefone,endereco,numero,bairro,cidade,estado,generate_password_hash(senha),filename)
+        cpf = ''
+        rg = ''
+
+        create_user(
+            nome, 
+            sobrenome, 
+            data_nasc, 
+            telefone, 
+            cpf, 
+            rg, 
+            endereco, 
+            numero, 
+            bairro, 
+            cidade, 
+            estado, 
+            email, 
+            generate_password_hash(senha), 
+            filename, 
+            observacao
+        )
         flash('Cadastro realizado')
         return redirect(url_for('auth.login'))
 
-    return render_template('pages/cadastro.html')
+    return render_template('cadastro.html')
 
 @bp.route('/login', methods=['GET','POST'])
 def login():
@@ -56,13 +76,12 @@ def login():
 
             return redirect(url_for('user.perfil'))
 
-        flash('Login inválido')
+        flash('Login invalido')
 
-    return render_template('pages/login.html')
-
+    return render_template('login.html')
 
 @bp.route('/logout')
 def logout():
     session.clear() 
-    flash('Você saiu da sua conta.')
+    flash('Voce saiu da sua conta.')
     return redirect(url_for('auth.login'))

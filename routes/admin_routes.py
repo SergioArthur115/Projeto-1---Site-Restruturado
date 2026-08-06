@@ -54,7 +54,7 @@ def edit(id):
     if request.method == 'POST':
         nome = request.form.get('nome')
         sobrenome = request.form.get('sobrenome')
-        datanasc = request.form.get('datanasc')
+        data_nasc = request.form.get('data_nasc')
         telefone = request.form.get('telefone')
         endereco = request.form.get('endereco')
         numero = request.form.get('numero')
@@ -72,7 +72,7 @@ def edit(id):
             filename = f"{uuid.uuid4()}.{ext}"
             file.save(os.path.join(UPLOAD_FOLDER, filename))
 
-        update_user(id, nome, sobrenome, datanasc, endereco, numero, bairro, cidade, estado, telefone, email, filename)
+        update_user(id, nome, sobrenome, data_nasc, endereco, numero, bairro, cidade, estado, telefone, email, filename)
 
         return redirect(url_for('admin.admin'))
 
