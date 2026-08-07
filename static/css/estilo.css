@@ -7,7 +7,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     background-color: #f4f4f4;
-    line-height: 1.2; /* Ajustado para ficar mais compacto */
+    line-height: 1.2;
 }
 
 /* - configuracao da main (conteudo) - */
@@ -39,7 +39,7 @@ img {
 h1, h2, h3, h4 {
     font-family: Arial, Helvetica, sans-serif;
     color: #003366;
-    margin-top: 20px; /* Reduzi um pouco para nao ficar tao espaçado */
+    margin-top: 20px;
     margin-bottom: 15px;
     text-align: left;
 }
@@ -47,13 +47,13 @@ h1, h2, h3, h4 {
 p {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    line-height: 1.6; /* Deixei um pouco menor para o texto ficar mais justo */
+    line-height: 1.6;
     color: #333;
     margin-bottom: 20px;
     text-align: justify;
 }
 
-/* - configuracao do cabecalho e menu (HEADER FINO) - */
+/* - configuracao do cabecalho e menu (TAMANHO MEDIO-GRANDE) - */
 
 header {
     background-color: #003366; 
@@ -65,31 +65,27 @@ header section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 8px 20px; /* Diminui o padding para deixar o header fino */
+    padding: 12px 20px;
     max-width: 1200px; 
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
 .logosenac {
-    height: 35px; /* Mudei de 60px para 35px, ficou bem menor! */
+    height: 70px;
     width: auto;
     margin: 0; 
     display: block;
 }
 
-/* - esconde o checkbox do menu mobile - */
-
 #bt_menu {
     display: none;
 }
 
-/* - estilo do botao hamburguer - */
-
 label[for="bt_menu"] {
     display: none;
     cursor: pointer;
-    font-size: 26px; /* Tamanho do botao 3 linhas */
+    font-size: 26px;
     color: white;
     padding: 5px 10px;
     background-color: #002244;
@@ -103,7 +99,7 @@ label[for="bt_menu"] {
     padding: 0;
     margin: 0;
     display: flex;
-    align-items: center; /* Garante que o texto do menu fique alinhado ao centro da linha */
+    align-items: center;
     background-color: #003366;
 }
 
@@ -113,10 +109,10 @@ label[for="bt_menu"] {
 
 .menu_principal ul li a {
     display: block;
-    padding: 10px 15px; /* Diminui o padding do item do menu */
+    padding: 15px 20px;
     text-decoration: none;
     color: white;
-    font-size: 15px; /* Fonte levemente menor */
+    font-size: 17px;
     transition: background 0.3s;
 }
 
@@ -152,9 +148,9 @@ label[for="bt_menu"] {
 }
 
 .menu_principal ul ul li a {
-    padding: 10px 16px;
+    padding: 12px 16px;
     color: #ddd;
-    font-size: 14px;
+    font-size: 15px;
 }
 
 .menu_principal ul ul li a:hover {
@@ -162,23 +158,43 @@ label[for="bt_menu"] {
     color: white;
 }
 
+/* - configuracao dos icones de redes sociais - */
+
+header section > div:last-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header section > div:last-child img {
+    height: 38px;
+    width: auto;
+    margin: 0;
+    display: block;
+    transition: transform 0.2s;
+}
+
+header section > div:last-child img:hover {
+    transform: scale(1.1);
+}
+
 /* - responsividade (celular e tablet) - */
 
 @media all and (max-width: 800px) {
     header section {
         flex-direction: row;
-        padding: 5px 15px; /* Padding menor ainda no celular */
+        padding: 8px 15px;
     }
 
     label[for="bt_menu"] {
         display: block;
-        font-size: 20px; /* Hamburger menor no celular */
+        font-size: 20px;
     }
 
     .menu_principal {
         display: none;
         width: 100%;
-        margin-top: 5px; /* Menos espaco entre o menu e o topo */
+        margin-top: 5px;
     }
 
     .menu_principal ul {
@@ -209,6 +225,10 @@ label[for="bt_menu"] {
 
     .menu_principal ul ul li {
         border-bottom: 1px solid #1a4a7a;
+    }
+    
+    header section > div:last-child img {
+        height: 30px;
     }
 }
 
@@ -255,19 +275,27 @@ label {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-/* - estilos do rodape - */
+/* - estilos do rodape (MESMA ALTURA DO HEADER) - */
 
 .footer {
     background-color: #003366;
     color: white;
     text-align: center;
-    padding: 15px; /* Diminui padding do footer */
+    padding: 30px 20px; /* Padding bem grosso igual a altura total do header */
     margin-top: 20px;
+    width: 100%;
+    
+    /* Garante que o texto fique no meio da barra */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer h2 {
-    font-size: 14px;
-    margin: 0;
+    font-size: 22px; /* Fonte grande e imponente */
+    font-weight: normal;
+    margin: 0;       /* Remove a margem padrao do h2 */
+    padding: 0;      /* Remove espaco interno extra */
     color: white;
     font-family: Arial, Helvetica, sans-serif;
 }
