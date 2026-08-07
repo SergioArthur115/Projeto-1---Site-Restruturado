@@ -1,42 +1,62 @@
 * {
     box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-    padding: 0;
     background-color: #f4f4f4;
+    line-height: 1.2; /* Ajustado para ficar mais compacto */
 }
+
+/* - configuracao da main (conteudo) - */
 
 main {
     min-height: 80vh;
-    padding: 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 30px;
+    max-width: 95%; 
+    margin: 20px auto;
     background-color: white;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 section {
     padding: 10px;
 }
 
+/* - organizando imagens, titulos e paragrafos - */
+
 img {
     max-width: 100%;
     height: auto;
-    border-radius: 4px;
+    border-radius: 8px;
+    display: block;
+    margin: 20px auto;
 }
 
 h1, h2, h3, h4 {
     font-family: Arial, Helvetica, sans-serif;
-    color: #003366; /* Azul escuro Senac */
+    color: #003366;
+    margin-top: 20px; /* Reduzi um pouco para nao ficar tao espaçado */
+    margin-bottom: 15px;
+    text-align: left;
 }
 
-/* - configuracao do cabecalho e menu - */
+p {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    line-height: 1.6; /* Deixei um pouco menor para o texto ficar mais justo */
+    color: #333;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* - configuracao do cabecalho e menu (HEADER FINO) - */
 
 header {
-    background-color: #003366; /* Azul escuro Senac */
+    background-color: #003366; 
     color: white;
     width: 100%;
 }
@@ -45,39 +65,45 @@ header section {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
-    max-width: 1200px;
+    padding: 8px 20px; /* Diminui o padding para deixar o header fino */
+    max-width: 1200px; 
     margin: 0 auto;
     flex-wrap: wrap;
 }
 
 .logosenac {
-    height: 50px;
+    height: 35px; /* Mudei de 60px para 35px, ficou bem menor! */
     width: auto;
+    margin: 0; 
+    display: block;
 }
 
-/* esconde o checkbox do menu mobile */
+/* - esconde o checkbox do menu mobile - */
+
 #bt_menu {
     display: none;
 }
 
-/* estilo do botao hamburguer (3 linhas) */
+/* - estilo do botao hamburguer - */
+
 label[for="bt_menu"] {
     display: none;
     cursor: pointer;
-    font-size: 30px;
+    font-size: 26px; /* Tamanho do botao 3 linhas */
     color: white;
     padding: 5px 10px;
     background-color: #002244;
     border-radius: 4px;
 }
 
-/* menu principal */
+/* - menu principal - */
+
 .menu_principal ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
+    align-items: center; /* Garante que o texto do menu fique alinhado ao centro da linha */
     background-color: #003366;
 }
 
@@ -87,26 +113,27 @@ label[for="bt_menu"] {
 
 .menu_principal ul li a {
     display: block;
-    padding: 15px 20px;
+    padding: 10px 15px; /* Diminui o padding do item do menu */
     text-decoration: none;
     color: white;
-    font-size: 16px;
+    font-size: 15px; /* Fonte levemente menor */
     transition: background 0.3s;
 }
 
 .menu_principal ul li a:hover {
-    background-color: #ff8c00; /* Laranja Senac */
+    background-color: #ff8c00; 
     color: white;
 }
 
-/* submenu (drop-down) - cursos */
+/* - submenu (drop-down) cursos - */
+
 .menu_principal ul ul {
     display: none;
     position: absolute;
     top: 100%;
     left: 0;
-    background-color: #002244; /* Azul mais escuro para o submenu */
-    min-width: 220px;
+    background-color: #002244;
+    min-width: 200px;
     z-index: 1000;
     flex-direction: column;
 }
@@ -125,8 +152,9 @@ label[for="bt_menu"] {
 }
 
 .menu_principal ul ul li a {
-    padding: 12px 16px;
+    padding: 10px 16px;
     color: #ddd;
+    font-size: 14px;
 }
 
 .menu_principal ul ul li a:hover {
@@ -139,21 +167,20 @@ label[for="bt_menu"] {
 @media all and (max-width: 800px) {
     header section {
         flex-direction: row;
+        padding: 5px 15px; /* Padding menor ainda no celular */
     }
 
-    /* mostra o botao hamburguer */
     label[for="bt_menu"] {
         display: block;
+        font-size: 20px; /* Hamburger menor no celular */
     }
 
-    /* esconde o menu principal por padrao no celular */
     .menu_principal {
         display: none;
         width: 100%;
-        margin-top: 10px;
+        margin-top: 5px; /* Menos espaco entre o menu e o topo */
     }
 
-    /* faz os itens ficarem um embaixo do outro no celular */
     .menu_principal ul {
         flex-direction: column;
         width: 100%;
@@ -168,12 +195,10 @@ label[for="bt_menu"] {
         border-bottom: none;
     }
 
-    /* quando clicar no botao hamburguer, o menu aparece */
     #bt_menu:checked ~ .menu_principal {
         display: block;
     }
 
-    /* no celular, o submenu vira um menu normal */
     .menu_principal ul ul {
         position: static;
         display: block;
@@ -187,10 +212,10 @@ label[for="bt_menu"] {
     }
 }
 
-/* - estilos basicos de botoes e formularios - */
+/* - estilos de botoes e formularios - */
 
 button, .btn_cadastrar, .btn_entrar {
-    background-color: #ff8c00; /* Laranja Senac */
+    background-color: #ff8c00;
     color: white;
     border: none;
     padding: 10px 20px;
@@ -200,10 +225,11 @@ button, .btn_cadastrar, .btn_entrar {
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
     transition: background 0.3s;
+    margin-top: 5px;
 }
 
 button:hover, .btn_cadastrar:hover, .btn_entrar:hover {
-    background-color: #e67e00; /* Laranja um pouco mais escuro ao passar o mouse */
+    background-color: #e67e00;
 }
 
 input[type="text"], input[type="email"], input[type="password"], input[type="date"], input[type="tel"], select, textarea {
@@ -225,17 +251,17 @@ label {
     font-weight: bold;
     display: block;
     margin-bottom: 5px;
-    color: #003366; /* Azul escuro Senac nos rotulos */
+    color: #003366;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 /* - estilos do rodape - */
 
 .footer {
-    background-color: #003366; /* Azul escuro Senac */
+    background-color: #003366;
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 15px; /* Diminui padding do footer */
     margin-top: 20px;
 }
 
@@ -250,14 +276,14 @@ label {
 
 a {
     text-decoration: none;
-    color: #ff8c00; /* Laranja Senac */
+    color: #ff8c00;
 }
 
 a:hover {
-    color: #cc7000; /* Laranja mais escuro */
+    color: #cc7000;
 }
 
-/* - estilos das listas na pagina admin - */
+/* - estilos da lista admin - */
 
 .admin_lista {
     list-style: none;
@@ -276,7 +302,7 @@ a:hover {
     flex-wrap: wrap;
 }
 
-/* - estilos dos iframes (mapas e videos) - */
+/* - iframes - */
 
 iframe {
     max-width: 100%;
